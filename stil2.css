@@ -1,0 +1,156 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+.main {
+	margin:10px;
+}
+
+.zgornji{
+	border:1px solid lightgrey;
+	width:350px;
+	margin: auto;
+	text-align:center;
+}
+.ig{
+	height:51px;
+	width:175px;
+	margin:50px 0 10px;
+}
+.zgornji h4{
+	font-family:Arial, Helvetica, sans-serif;
+	color:grey;
+	padding:0 41px;
+}
+.fb{
+	height:34px;
+	width:268px;
+	margin:20px auto 10px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background:#4a5df9;
+	border-radius:7px;
+}
+.fb a{
+	font-family:Arial, Helvetica, sans-serif;
+	color:white;
+	text-decoration:none;
+	font-size:14px;
+	font-weight:bold;
+}
+.fb img{
+	height:16px;
+	width:16px;
+	margin:0 8px 0 0;
+	
+}
+.or{
+	display:flex;
+	align-items:center;
+	text-align:center;
+	margin:0 43px;
+}
+.or hr{
+	flex:1;
+}
+.or a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	margin:10px;
+}
+.input{
+	height:30px;
+	width:250px;
+	margin-bottom:5px;
+	font-size:12px;
+	border-color:lightgrey;
+}
+.besedilo{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:grey;
+	width:267px;
+	margin:0 auto;
+}
+.gumb{
+	text-decoration:none;
+	color:#708dff;
+}
+.next{
+	height:32px;
+	width:268px;
+	margin:10px 0 20px 0;
+	border-radius:7px;
+	background:#808dfb;
+	border-style:none;
+	color:white;
+	font-weight:bold;
+}
+.spodi{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:grey;
+	width:300px;
+	padding-top:16px;
+	padding-bottom:16px;
+	border-style:none;
+	margin:0 auto;
+}
+.report{
+	font-size:13px;
+	color:#6f64fb;
+	text-decoration:none;
+}
+.spodnji{
+	margin-top:10px;
+	height:60px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	display:flex;
+	flex-direction:column; /*tako ostane v stolpcu*/
+	justify-content:center;	
+}
+.login{
+	text-decoration:none;
+	color:#6f64fb;
+	padding-left:2px;
+}
+.dno{
+	display:flex;
+	list-style-type:none;
+	flex-wrap:wrap; /*za zadnji element*/	
+	justify-content:center;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	margin-top:52px;
+}
+.dno li{
+	padding:8px;
+}
+.dno li:last-child{ /*zadnji element v select tag, ki mora biti pod ostalimi*/
+	flex-basis:100%; /*zadnji element zavzame celo vrstico, da gre pod ostale*/
+	text-align:center;
+}
+.dno a{
+	text-decoration:none;
+}
+.dno a, li, select{
+	color:grey;
+	font-size:12px;
+	font-weight:lighter;
+	border-style:none;
+	background:white;
+}
+.dno a:hover{
+	text-decoration:underline;
+}
+.dno select{
+	border-style:none;
+	width:65px;
+	margin-right:10px;
+}
+button, select{
+	cursor:pointer;
+}
