@@ -25,6 +25,31 @@
 	font-size:12px;
 	border-color:lightgrey;
 }
+.geslo{
+	position:relative;
+	display:inline-block;
+}
+.geslo input {
+	height: 30px;
+}
+
+.geslo button {
+	display:none;
+	position: absolute;
+	right: 5px;
+	top: 50%;                 /* middle of input */
+	transform: translateY(-50%); /* center vertically */
+	height: 20px;
+	width: 50px;
+	text-align: center;
+	font-size: 14px;
+	border: 1px solid;
+	border-radius: 5px;
+	background: none;
+	cursor: pointer;
+}
+
+
 .login{
 	height:30px;
 	width:253px;
