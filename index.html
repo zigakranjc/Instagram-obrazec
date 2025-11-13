@@ -4,7 +4,6 @@
 		<title>Login • Instagram</title>
 		<link rel="stylesheet" href="stil.css">
 		<link rel="icon" type="image/x-icon" href="slike/favicon.ico">
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	</head>
 	<body>
 		<div  class="main">
@@ -16,7 +15,7 @@
 					<input class="input" type="password" id="pass" placeholder=" Password">
 					<button type="button" id="sh">Show</button>
 					</div>
-					<button type="submit" class="login">Log in</button><br /><br />
+					<button type="submit" class="login" id="loginGumb">Log in</button><br /><br />
 					
 					<div class="or">
 						<hr/>
@@ -138,52 +137,8 @@
 				</ul>	
 			</form>
 		</div>
-			<script>
-				document.getElementById('login').addEventListener('submit', function(event) {
-					event.preventDefault(); //brez tega se forma submita in ne pokaze sweetalert
-					
-					const username = this.user.value.trim();
-					const password = this.pass.value.trim();
-
-					if (!username || !password) {
-						Swal.fire({
-							title: 'Missing fields',
-							text: 'Please fill out both username and password.',
-							icon: 'warning',
-							confirmButtonText: 'OK'
-						});
-					} else {
-						Swal.fire({
-							title: 'Logged in!',
-							text: `Welcome, ${username}!`,
-							icon: 'success',
-							confirmButtonText: 'OK'
-						});
-					}
-				});
-			</script>
-			
-			<script>
-				const gumb = document.getElementById('sh');
-				const password = document.getElementById('pass');
-// Show/hide the button based on input content
-password.addEventListener('input', function() {
-  if (this.value.length > 0) {
-    gumb.style.display = 'block';
-  } else {
-    gumb.style.display = 'none';
-  }
-});
-				gumb.addEventListener('click', function() {				
-					if (password.type === 'password') {
-						password.type = 'text';
-						gumb.textContent = 'Hide';
-					} else {
-						password.type = 'password';
-						gumb.textContent = 'Show';
-					}
-				});
-			</script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="skripte.js"></script>
 	</body>
 </html>
 
