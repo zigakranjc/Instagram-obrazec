@@ -4,10 +4,11 @@
 		<title>Sign up • Instagram</title>
 		<link rel="stylesheet" href="stil2.css">
 		<link rel="icon" type="image/x-icon" href="slike/favicon.ico">
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>		
 	</head>
 	<body>
 		<div class="main">
-			<form action="GET">
+			<form id="signup">
 				<div class="zgornji">
 					<img src="slike/ig.png" alt="instagram" class="ig">
 					<h4>Sign up to see photos and videos from your friends.</h4>
@@ -21,16 +22,19 @@
 						<hr/>
 					</div>	
 					<form>
-						<input type="text" name="mail" class="input" placeholder=" Mobile Number or Email"><br />
-						<input type="password" name="pass" class="input" placeholder=" Password"><br />
-						<input type="text" name="name" class="input" placeholder=" Full Name"><br />
-						<input type="text" name="user" class="input" placeholder=" Username"><br />
+						<input type="text" id="mail" class="input" placeholder=" Mobile Number or Email"><br />
+						<div class="geslo">
+							<input type="password" class="input" id="pass" placeholder=" Password">
+							<button type="button" id="sh">Show</button>
+						</div>
+						<input type="text" id="name" class="input" placeholder=" Full Name"><br />
+						<input type="text" id="user" class="input" placeholder=" Username"><br />
 					</form>
 					<div class="besedilo">
 							<a> People who use our service may have uploaded your contact information to Instagram.<a href="#" class="gumb">Learn More</a><br/><br/>
 						<a>By signing up, you agree to our <a href="#" class="gumb">Terms</a>. Learn how we collect, use and share your data in our <a href="#" class="gumb">Privacy Policy</a> and how we use cookies and similar technology in our <a href="#" class="gumb">Cookies Policy</a>.</a>
 					</div>
-					<button type="submit" class="next">Sign up</button>
+					<button type="submit" class="next" id="signupGumb">Sign up</button>
 					<div class="spodi">
 						<a>You can also <a href="#" class="report">report content you believe is unlawful</a> in your country without logging in.</a>
 					</div>
@@ -115,5 +119,6 @@
 				</ul>
 			</form>
 		</div>
+		<script src="skripte2.js"></script>
 	</body>
 </html>
