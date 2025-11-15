@@ -4,14 +4,22 @@
 }
 
 .main {
-	margin:10px;
+	position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-
 .zgornji{
 	border:1px solid lightgrey;
 	width:350px;
-	margin: auto;
+	margin: 0 auto;
 	text-align:center;
+}
+.oba{
+	margin: auto 0;
+    align-self: center;
+    padding: 20px 40px;
+    border-radius: 10px;
 }
 .ig{
 	height:51px;
@@ -109,7 +117,7 @@
 	padding-top:16px;
 	padding-bottom:16px;
 	border-style:none;
-	margin:0 auto;
+	margin: 0 auto;
 }
 .report{
 	font-size:13px;
@@ -134,6 +142,13 @@
 	padding-left:2px;
 }
 .dno{
+	align-self: center;
+	margin-top:auto;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+.dno ul{
 	display:flex;
 	list-style-type:none;
 	flex-wrap:wrap; /*za zadnji element*/	

@@ -7,7 +7,7 @@
 	loginGumb.style.cursor = 'not-allowed';
 
 	
-	pass.addEventListener('input', function () {
+	function preveriLogin () {
 		// Show/hide glede na to, ali je kaj vpisano ali ne
 		if (this.value.length > 0) {
 			gumb.style.display = 'block';
@@ -15,8 +15,9 @@
 			gumb.style.display = 'none';
 		}
 		//moč gesla
-		const geslo = this.value;
+		const geslo = pass.value.trim();
 		const velike = /[A-Z]/.test(geslo);
+		const male = /[a-z]/.test(geslo);
 		const posebni = /[!@#$%^&*()_+\-=\~`\[\]{}|\\;:'",.<>\/?]/.test(geslo);
 		const stevilke = /[0-9]/.test(geslo);
 	
@@ -25,7 +26,7 @@
 		const telefon = /[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/.test(uporabnik);
 		const username = /^[A-Za-z0-9]+$/.test(uporabnik);
 		
-		if (geslo.length >= 8 && velike && posebni && stevilke && (mail || telefon || username)) {
+		if (geslo.length >= 8 && velike && male && posebni && stevilke && (mail || telefon || username)) {
 			loginGumb.disabled = false;
 			loginGumb.style.cursor = 'pointer';
 			
@@ -33,7 +34,7 @@
 			loginGumb.disabled = true;
 		}
 		
-	});
+	}
 	
 	// menja show/hide
 	gumb.addEventListener('click', function () {
@@ -46,6 +47,8 @@
 	  }
 	});
 
+	pass.addEventListener('input', preveriLogin);
+	user.addEventListener('input', preveriLogin);
 	
 	loginGumb.addEventListener('click', function (event){
 		event.preventDefault(); // brez tega ne pokaže alerta, ker gre kr naprej
