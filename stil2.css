@@ -74,7 +74,8 @@
 	width:250px;
 	margin-bottom:5px;
 	font-size:12px;
-	border-color:lightgrey;
+	border:1px solid lightgrey;
+	background:#fafafa;
 }
 .geslo{
 	position:relative;
@@ -109,7 +110,7 @@
 }
 .gumb{
 	text-decoration:none;
-	color:#708dff;
+	color:#6f64fb;
 }
 .next{
 	height:32px;
